@@ -155,6 +155,59 @@ def generate_aptrade_data(cfg: Optional[Config] = None) -> dict:
         }
         results[period_key] = period_dict
 
+    # Stock options signals (buying cheap IV / debit spreads on momentum stocks)
+    try:
+        scan_res = engine.scan()
+        stock_signals = []
+        for s in scan_res.signals:
+            if s.kind in ("STOCK_LONG_OPTION", "STOCK_DEBIT_SPREAD") and s.plan:
+                max_p = s.plan.max_profit
+                if max_p is not None and (max_p == float('inf') or max_p == float('-inf')):
+                    max_p = None
+                elif max_p is not None:
+                    max_p = round(max_p, 0)
+
+                max_l = s.plan.max_loss
+                if max_l is not None and (max_l == float('inf') or max_l == float('-inf')):
+                    max_l = None
+                elif max_l is not None:
+                    max_l = round(max_l, 0)
+
+                exit_rules_desc = [r.description for r in s.plan.exit_rules] if s.plan.exit_rules else []
+
+                ivr = None
+                if s.iv_context:
+                    ivr = s.iv_context.get("iv_rank") if isinstance(s.iv_context, dict) else getattr(s.iv_context, "iv_rank", None)
+                if ivr is not None:
+                    ivr = round(float(ivr), 1)
+
+                stock_signals.append({
+                    "underlying": s.underlying,
+                    "direction": s.direction,
+                    "headline": s.headline,
+                    "strategy": s.plan.strategy,
+                    "expiry": s.plan.expiry.isoformat() if s.plan.expiry else None,
+                    "iv_rank": ivr,
+                    "max_profit": max_p,
+                    "max_loss": max_l,
+                    "breakevens": [round(b, 2) for b in s.plan.breakevens] if s.plan.breakevens else [],
+                    "legs": [
+                        {
+                            "action": l.side.upper(),
+                            "type": l.option_type,
+                            "strike": str(int(l.strike)),
+                            "premium": round(l.premium, 2),
+                            "symbol": l.symbol,
+                            "lots": l.lots
+                        } for l in s.plan.legs
+                    ],
+                    "exit_rules": exit_rules_desc
+                })
+        results["stock_options"] = stock_signals
+    except Exception as e:
+        print(f"Warning: could not export stock options: {e}")
+        results["stock_options"] = []
+
     now_ist = datetime.now(TZ)
     return {
         "generated_at": now_ist.isoformat(),
