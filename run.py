@@ -154,6 +154,13 @@ def cmd_sync_tv(args):
     push_to_tradingview(session_id=sid, session_sign=sign, watchlist_name=wl, data_path=data)
 
 
+def cmd_backtest(args):
+    from optiondesk.backtest_sheet import export_backtest_to_csv
+
+    out_file = export_backtest_to_csv(args.out)
+    print(f"✅ Strategy backtest exported to {out_file}")
+
+
 def cmd_test_alert(args):
     cfg = Config.load(args.config)
     from optiondesk.alerts import send_telegram
@@ -203,6 +210,10 @@ def main():
     p_tv.add_argument("--session-id", default="", help="TradingView sessionid")
     p_tv.add_argument("--session-sign", default="", help="TradingView sessionid_sign")
 
+    # backtest
+    p_bt = subparsers.add_parser("backtest", help="Run strategy backtest and export CSV for Google Sheets")
+    p_bt.add_argument("--out", default="docs/3nifty_v2_backtest.csv", help="Output CSV path")
+
     # test-alert
     subparsers.add_parser("test-alert", help="Send test alert to Telegram")
 
@@ -218,6 +229,7 @@ def main():
         "rules": cmd_rules,
         "export-aptrade": cmd_export_aptrade,
         "sync-tv": cmd_sync_tv,
+        "backtest": cmd_backtest,
         "test-alert": cmd_test_alert,
     }
     dispatch[args.cmd](args)

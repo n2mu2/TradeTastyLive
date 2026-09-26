@@ -1,0 +1,51 @@
+=== 3NIFTY V1 vs V2 vs TASTYLIVE QUANT STRATEGY BACKTEST LOG ===
+Generated for Google Sheet Sync: 3NiftyV2
+
+Variant,Total Trades,Win Rate %,Total Net PnL (₹),Avg Win (₹),Avg Loss (₹),Profit Factor
+3NiftyV1 (0.35Δ),10,80.0%,"₹3,276","₹1,823","₹5,655",1.29
+3NiftyV2 (0.16Δ),10,90.0%,"₹1,330",₹748,"₹5,402",1.25
+TastyLive Sweet Spot (0.22Δ + 50% TP),10,90.0%,"₹5,642","₹1,031","₹3,640",2.55
+TastyLive Stock Option Buy,10,50.0%,"₹12,730","₹4,750","₹2,204",2.16
+
+--- TRADE LOG DATA (PASTE INTO SHEET1 ROW 12) ---
+Trade ID,Cycle Date,Underlying,Strategy Type,Strategy Variant,Strikes,Entry DTE,Entry Spot,Entry Premium (₹),Max Profit (₹),Max Loss (₹),Market Scenario,Exit DTE,Exit Trigger / Reason,Realized PnL (₹),Return on Risk %,Capital Used (₹)
+T001,2026-W1,NIFTY,Bull Put Spread,3NiftyV1 (0.35Δ),S 22700PE / B 22550PE,7,22800,34.0,2210.0,7540.0,Mild Bullish Trend (+0.8%),0,Full Expiration Win,2210.0,29.3%,9750.0
+T002,2026-W1,NIFTY,Bull Put Spread,3NiftyV2 (0.16Δ),S 22250PE / B 22100PE,7,22800,11.5,748.0,9002.0,Mild Bullish Trend (+0.8%),0,Safe OTM Expiration Win,748.0,8.3%,9750.0
+T003,2026-W1,NIFTY,Bull Put Spread,TastyLive Sweet Spot (0.22Δ + 50% TP),S 22450PE / B 22250PE,7,22800,28.0,1820.0,11180.0,Mild Bullish Trend (+0.8%),4,50% Profit Target Hit (tastylive rule),910.0,8.1%,13000.0
+T004,2026-W1,RELIANCE,Next-Month Call (0.65Δ / Debit),TastyLive Stock Option Buy,B 1421CE / S 1479CE,42,1450.0,-38.0,19000.0,9500.0,Mild Bullish Trend (+0.8%),28,50% Debit Profit Target Hit,4750.0,50.0%,9500.0
+T005,2026-W2,NIFTY,Bull Put Spread,3NiftyV1 (0.35Δ),S 22850PE / B 22700PE,7,22980,34.0,2210.0,7540.0,Sharp Pullback (-1.8%),2,Stop Loss Hit (Breached 0.35Δ),-5655.0,-75.0%,9750.0
+T006,2026-W2,NIFTY,Bull Put Spread,3NiftyV2 (0.16Δ),S 22450PE / B 22300PE,7,22980,11.5,748.0,9002.0,Sharp Pullback (-1.8%),0,Safe OTM Expiration Win,748.0,8.3%,9750.0
+T007,2026-W2,NIFTY,Bull Put Spread,TastyLive Sweet Spot (0.22Δ + 50% TP),S 22650PE / B 22450PE,7,22980,28.0,1820.0,11180.0,Sharp Pullback (-1.8%),0,Closed at Expiry with Decay,1456.0,13.0%,13000.0
+T008,2026-W2,RELIANCE,Next-Month Call (0.65Δ / Debit),TastyLive Stock Option Buy,B 1421CE / S 1479CE,42,1450.0,-38.0,19000.0,9500.0,Sharp Pullback (-1.8%),30,40% Capital Stop Loss Hit,-3800.0,-40.0%,9500.0
+T009,2026-W3,NIFTY,Bull Put Spread,3NiftyV1 (0.35Δ),S 22450PE / B 22300PE,7,22560,34.0,2210.0,7540.0,Violent Reversal Rally (+2.1%),0,Full Expiration Win,2210.0,29.3%,9750.0
+T010,2026-W3,NIFTY,Bull Put Spread,3NiftyV2 (0.16Δ),S 22000PE / B 21850PE,7,22560,11.5,748.0,9002.0,Violent Reversal Rally (+2.1%),0,Safe OTM Expiration Win,748.0,8.3%,9750.0
+T011,2026-W3,NIFTY,Bull Put Spread,TastyLive Sweet Spot (0.22Δ + 50% TP),S 22200PE / B 22000PE,7,22560,28.0,1820.0,11180.0,Violent Reversal Rally (+2.1%),4,50% Profit Target Hit (tastylive rule),910.0,8.1%,13000.0
+T012,2026-W3,RELIANCE,Next-Month Call (0.65Δ / Debit),TastyLive Stock Option Buy,B 1421CE / S 1479CE,42,1450.0,-38.0,19000.0,9500.0,Violent Reversal Rally (+2.1%),28,50% Debit Profit Target Hit,4750.0,50.0%,9500.0
+T013,2026-W4,NIFTY,Bull Put Spread,3NiftyV1 (0.35Δ),S 22900PE / B 22750PE,7,23030,34.0,2210.0,7540.0,Tight Range Consolidation (+0.2%),0,Full Expiration Win,2210.0,29.3%,9750.0
+T014,2026-W4,NIFTY,Bull Put Spread,3NiftyV2 (0.16Δ),S 22500PE / B 22350PE,7,23030,11.5,748.0,9002.0,Tight Range Consolidation (+0.2%),0,Safe OTM Expiration Win,748.0,8.3%,9750.0
+T015,2026-W4,NIFTY,Bull Put Spread,TastyLive Sweet Spot (0.22Δ + 50% TP),S 22700PE / B 22500PE,7,23030,28.0,1820.0,11180.0,Tight Range Consolidation (+0.2%),4,50% Profit Target Hit (tastylive rule),910.0,8.1%,13000.0
+T016,2026-W4,RELIANCE,Next-Month Call (0.65Δ / Debit),TastyLive Stock Option Buy,B 1421CE / S 1479CE,42,1450.0,-38.0,19000.0,9500.0,Tight Range Consolidation (+0.2%),21,Time Stop at 21 DTE (Capital Preserved),-1140.0,-12.0%,9500.0
+T017,2026-W5,NIFTY,Bull Put Spread,3NiftyV1 (0.35Δ),S 22950PE / B 22800PE,7,23080,34.0,2210.0,7540.0,Choppy Grind (-0.6%),0,Scratched / Breakeven,663.0,8.8%,9750.0
+T018,2026-W5,NIFTY,Bull Put Spread,3NiftyV2 (0.16Δ),S 22550PE / B 22400PE,7,23080,11.5,748.0,9002.0,Choppy Grind (-0.6%),0,Safe OTM Expiration Win,748.0,8.3%,9750.0
+T019,2026-W5,NIFTY,Bull Put Spread,TastyLive Sweet Spot (0.22Δ + 50% TP),S 22750PE / B 22550PE,7,23080,28.0,1820.0,11180.0,Choppy Grind (-0.6%),0,Closed at Expiry with Decay,1456.0,13.0%,13000.0
+T020,2026-W5,RELIANCE,Next-Month Call (0.65Δ / Debit),TastyLive Stock Option Buy,B 1421CE / S 1479CE,42,1450.0,-38.0,19000.0,9500.0,Choppy Grind (-0.6%),21,Time Stop at 21 DTE (Capital Preserved),-1140.0,-12.0%,9500.0
+T021,2026-W6,NIFTY,Bull Put Spread,3NiftyV1 (0.35Δ),S 22800PE / B 22650PE,7,22940,34.0,2210.0,7540.0,Steady Bull Run (+1.2%),0,Full Expiration Win,2210.0,29.3%,9750.0
+T022,2026-W6,NIFTY,Bull Put Spread,3NiftyV2 (0.16Δ),S 22400PE / B 22250PE,7,22940,11.5,748.0,9002.0,Steady Bull Run (+1.2%),0,Safe OTM Expiration Win,748.0,8.3%,9750.0
+T023,2026-W6,NIFTY,Bull Put Spread,TastyLive Sweet Spot (0.22Δ + 50% TP),S 22600PE / B 22400PE,7,22940,28.0,1820.0,11180.0,Steady Bull Run (+1.2%),4,50% Profit Target Hit (tastylive rule),910.0,8.1%,13000.0
+T024,2026-W6,RELIANCE,Next-Month Call (0.65Δ / Debit),TastyLive Stock Option Buy,B 1421CE / S 1479CE,42,1450.0,-38.0,19000.0,9500.0,Steady Bull Run (+1.2%),28,50% Debit Profit Target Hit,4750.0,50.0%,9500.0
+T025,2026-W7,NIFTY,Bull Put Spread,3NiftyV1 (0.35Δ),S 23100PE / B 22950PE,7,23220,34.0,2210.0,7540.0,Deep Correction (-2.6%),2,Stop Loss Hit (Breached 0.35Δ),-5655.0,-75.0%,9750.0
+T026,2026-W7,NIFTY,Bull Put Spread,3NiftyV2 (0.16Δ),S 22700PE / B 22550PE,7,23220,11.5,748.0,9002.0,Deep Correction (-2.6%),1,Tested near SL,-5402.0,-60.0%,9750.0
+T027,2026-W7,NIFTY,Bull Put Spread,TastyLive Sweet Spot (0.22Δ + 50% TP),S 22850PE / B 22650PE,7,23220,28.0,1820.0,11180.0,Deep Correction (-2.6%),2,Stop Loss at 2.0x Credit,-3640.0,-32.6%,13000.0
+T028,2026-W7,RELIANCE,Next-Month Call (0.65Δ / Debit),TastyLive Stock Option Buy,B 1421CE / S 1479CE,42,1450.0,-38.0,19000.0,9500.0,Deep Correction (-2.6%),30,40% Capital Stop Loss Hit,-3800.0,-40.0%,9500.0
+T029,2026-W8,NIFTY,Bull Put Spread,3NiftyV1 (0.35Δ),S 22500PE / B 22350PE,7,22610,34.0,2210.0,7540.0,Oversold Bounce (+1.5%),0,Full Expiration Win,2210.0,29.3%,9750.0
+T030,2026-W8,NIFTY,Bull Put Spread,3NiftyV2 (0.16Δ),S 22050PE / B 21900PE,7,22610,11.5,748.0,9002.0,Oversold Bounce (+1.5%),0,Safe OTM Expiration Win,748.0,8.3%,9750.0
+T031,2026-W8,NIFTY,Bull Put Spread,TastyLive Sweet Spot (0.22Δ + 50% TP),S 22250PE / B 22050PE,7,22610,28.0,1820.0,11180.0,Oversold Bounce (+1.5%),4,50% Profit Target Hit (tastylive rule),910.0,8.1%,13000.0
+T032,2026-W8,RELIANCE,Next-Month Call (0.65Δ / Debit),TastyLive Stock Option Buy,B 1421CE / S 1479CE,42,1450.0,-38.0,19000.0,9500.0,Oversold Bounce (+1.5%),28,50% Debit Profit Target Hit,4750.0,50.0%,9500.0
+T033,2026-W9,NIFTY,Bull Put Spread,3NiftyV1 (0.35Δ),S 22850PE / B 22700PE,7,22950,34.0,2210.0,7540.0,Low Vol Sideways (-0.3%),0,Scratched / Breakeven,663.0,8.8%,9750.0
+T034,2026-W9,NIFTY,Bull Put Spread,3NiftyV2 (0.16Δ),S 22400PE / B 22250PE,7,22950,11.5,748.0,9002.0,Low Vol Sideways (-0.3%),0,Safe OTM Expiration Win,748.0,8.3%,9750.0
+T035,2026-W9,NIFTY,Bull Put Spread,TastyLive Sweet Spot (0.22Δ + 50% TP),S 22600PE / B 22400PE,7,22950,28.0,1820.0,11180.0,Low Vol Sideways (-0.3%),4,50% Profit Target Hit (tastylive rule),910.0,8.1%,13000.0
+T036,2026-W9,RELIANCE,Next-Month Call (0.65Δ / Debit),TastyLive Stock Option Buy,B 1421CE / S 1479CE,42,1450.0,-38.0,19000.0,9500.0,Low Vol Sideways (-0.3%),21,Time Stop at 21 DTE (Capital Preserved),-1140.0,-12.0%,9500.0
+T037,2026-W10,NIFTY,Bull Put Spread,3NiftyV1 (0.35Δ),S 22750PE / B 22600PE,7,22880,34.0,2210.0,7540.0,Breakout Continuation (+0.9%),0,Full Expiration Win,2210.0,29.3%,9750.0
+T038,2026-W10,NIFTY,Bull Put Spread,3NiftyV2 (0.16Δ),S 22350PE / B 22200PE,7,22880,11.5,748.0,9002.0,Breakout Continuation (+0.9%),0,Safe OTM Expiration Win,748.0,8.3%,9750.0
+T039,2026-W10,NIFTY,Bull Put Spread,TastyLive Sweet Spot (0.22Δ + 50% TP),S 22550PE / B 22350PE,7,22880,28.0,1820.0,11180.0,Breakout Continuation (+0.9%),4,50% Profit Target Hit (tastylive rule),910.0,8.1%,13000.0
+T040,2026-W10,RELIANCE,Next-Month Call (0.65Δ / Debit),TastyLive Stock Option Buy,B 1421CE / S 1479CE,42,1450.0,-38.0,19000.0,9500.0,Breakout Continuation (+0.9%),28,50% Debit Profit Target Hit,4750.0,50.0%,9500.0
