@@ -130,6 +130,14 @@ def cmd_rules(args):
     print("=================================================================\n")
 
 
+def cmd_export_aptrade(args):
+    cfg = Config.load(args.config)
+    from optiondesk.export_aptrade import export_to_file
+
+    out_file = export_to_file(args.out)
+    print(f"✅ APTrade options dataset exported successfully to {out_file}")
+
+
 def cmd_test_alert(args):
     cfg = Config.load(args.config)
     from optiondesk.alerts import send_telegram
@@ -168,6 +176,10 @@ def main():
     # rules
     subparsers.add_parser("rules", help="Display mechanical strategy rules")
 
+    # export-aptrade
+    p_exp = subparsers.add_parser("export-aptrade", help="Export options dataset for APTrade Android app")
+    p_exp.add_argument("--out", default="docs/data.json", help="Path to write data.json (default docs/data.json)")
+
     # test-alert
     subparsers.add_parser("test-alert", help="Send test alert to Telegram")
 
@@ -181,6 +193,7 @@ def main():
         "scan": cmd_scan,
         "check": cmd_check,
         "rules": cmd_rules,
+        "export-aptrade": cmd_export_aptrade,
         "test-alert": cmd_test_alert,
     }
     dispatch[args.cmd](args)

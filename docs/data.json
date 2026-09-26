@@ -1,0 +1,150 @@
+{
+  "generated_at": "2026-09-26T15:00:40.996817+05:30",
+  "spot": 25432.55,
+  "results": {
+    "next_week": {
+      "bull": {
+        "spot": 25432.55,
+        "sell_strike": 25100,
+        "sell_type": "PE",
+        "buy_strike": 24900,
+        "buy_type": "PE",
+        "sell_price": 24.61,
+        "buy_price": 6.4,
+        "sell_tv_symbol": "NIFTY29SEP2625100PE",
+        "buy_tv_symbol": "NIFTY29SEP2624900PE",
+        "stop_loss_spot": 25081.8,
+        "metrics": {
+          "max_profit": 1184.0,
+          "max_loss": 11816.0,
+          "width": 200,
+          "credit": 18.21,
+          "risk_reward": 0.1,
+          "pop": 85.4
+        }
+      },
+      "bear": {
+        "spot": 25432.55,
+        "sell_strike": 25750,
+        "sell_type": "CE",
+        "buy_strike": 26000,
+        "buy_type": "CE",
+        "sell_price": 31.07,
+        "buy_price": 6.48,
+        "sell_tv_symbol": "NIFTY29SEP2625750CE",
+        "buy_tv_symbol": "NIFTY29SEP2626000CE",
+        "stop_loss_spot": 25774.6,
+        "metrics": {
+          "max_profit": 1598.0,
+          "max_loss": 14652.0,
+          "width": 250,
+          "credit": 24.59,
+          "risk_reward": 0.11,
+          "pop": 82.6
+        }
+      },
+      "sideways": {
+        "spot": 25432.55,
+        "sell_put_strike": 25100,
+        "sell_call_strike": 25750,
+        "buy_put_strike": 24900,
+        "buy_call_strike": 26000,
+        "sell_put_price": 24.61,
+        "sell_call_price": 31.07,
+        "buy_put_price": 6.4,
+        "buy_call_price": 6.48,
+        "sell_put_tv": "NIFTY29SEP2625100PE",
+        "sell_call_tv": "NIFTY29SEP2625750CE",
+        "buy_put_tv": "NIFTY29SEP2624900PE",
+        "buy_call_tv": "NIFTY29SEP2626000CE",
+        "stop_loss_spot_low": 25057.2,
+        "stop_loss_spot_high": 25792.8,
+        "metrics": {
+          "max_profit": 2782.0,
+          "max_loss": 13468.0,
+          "width": 200,
+          "credit": 42.8,
+          "risk_reward": 0.21,
+          "pop": 68.0
+        }
+      },
+      "v2": {
+        "bull": {
+          "spot": 25432.55,
+          "sell_strike": 25200,
+          "sell_type": "PE",
+          "buy_strike": 24950,
+          "buy_type": "PE",
+          "sell_price": 44.33,
+          "buy_price": 9.34,
+          "sell_tv_symbol": "NIFTY29SEP2625200PE",
+          "buy_tv_symbol": "NIFTY29SEP2624950PE",
+          "stop_loss_spot": 25165.0,
+          "metrics": {
+            "max_profit": 2274.0,
+            "max_loss": 13976.0,
+            "width": 250,
+            "credit": 34.99,
+            "risk_reward": 0.16,
+            "pop": 77.1
+          }
+        },
+        "bear": {
+          "spot": 25432.55,
+          "sell_strike": 25700,
+          "sell_type": "CE",
+          "buy_strike": 25950,
+          "buy_type": "CE",
+          "sell_price": 39.17,
+          "buy_price": 9.88,
+          "sell_tv_symbol": "NIFTY29SEP2625700CE",
+          "buy_tv_symbol": "NIFTY29SEP2625950CE",
+          "stop_loss_spot": 25729.3,
+          "metrics": {
+            "max_profit": 1904.0,
+            "max_loss": 14346.0,
+            "width": 250,
+            "credit": 29.29,
+            "risk_reward": 0.13,
+            "pop": 78.5
+          }
+        },
+        "sideways": {
+          "spot": 25432.55,
+          "sell_put_strike": 25200,
+          "sell_call_strike": 25700,
+          "buy_put_strike": 24950,
+          "buy_call_strike": 25950,
+          "sell_put_price": 44.33,
+          "sell_call_price": 39.17,
+          "buy_put_price": 9.34,
+          "buy_call_price": 9.88,
+          "sell_put_tv": "NIFTY29SEP2625200PE",
+          "sell_call_tv": "NIFTY29SEP2625700CE",
+          "buy_put_tv": "NIFTY29SEP2624950PE",
+          "buy_call_tv": "NIFTY29SEP2625950CE",
+          "stop_loss_spot_low": 25135.7,
+          "stop_loss_spot_high": 25764.3,
+          "metrics": {
+            "max_profit": 4178.0,
+            "max_loss": 12072.0,
+            "width": 250,
+            "credit": 64.28,
+            "risk_reward": 0.35,
+            "pop": 55.6
+          }
+        }
+      }
+    },
+    "monthly": {
+      "bull": null,
+      "bear": null,
+      "sideways": null,
+      "v2": {
+        "bull": null,
+        "bear": null,
+        "sideways": null
+      }
+    }
+  }
+}

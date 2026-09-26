@@ -1,0 +1,59 @@
+name: Sync Options Spreads for APTrade
+run-name: "${{ inputs.narration || 'Sync Options Spreads for APTrade' }}"
+
+on:
+  schedule:
+    # 09:00 IST (03:30 UTC) & 15:30 IST (10:00 UTC) Mon-Fri
+    - cron: '30 3 * * 1-5'
+    - cron: '0 10 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      strategy_view:
+        description: 'Strategy View (ALL, BULL, BEAR, SIDEWAYS)'
+        required: false
+        default: 'ALL'
+        type: string
+      narration:
+        description: 'Reason / narration for manual dispatch'
+        required: false
+        default: 'APTrade: manual trigger'
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  sync-options:
+    name: Generate Options Spreads & Update docs/data.json
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt || pip install numpy scipy requests pyyaml fastapi pydantic
+
+      - name: Run OptionDesk Exporter
+        env:
+          ANGEL_API_KEY: ${{ secrets.ANGEL_API_KEY }}
+          ANGEL_CLIENT_CODE: ${{ secrets.ANGEL_CLIENT_CODE }}
+          ANGEL_PIN: ${{ secrets.ANGEL_PIN }}
+          ANGEL_TOTP_SECRET: ${{ secrets.ANGEL_TOTP_SECRET }}
+        run: |
+          python run.py export-aptrade --out docs/data.json
+
+      - name: Commit & Push docs/data.json
+        run: |
+          git config user.name "n2mu2"
+          git config user.email "n2mu2@users.noreply.github.com"
+          git add docs/data.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(data): auto-update APTrade options dataset [skip ci]" && git push)
