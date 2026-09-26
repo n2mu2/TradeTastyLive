@@ -1,0 +1,75 @@
+market:
+  provider: replay
+  risk_free_rate: 0.065
+  index_dividend_yield: 0.012
+  stock_dividend_yield: 0.008
+  index_underlying: NIFTY
+  stock_universe: []
+  angel_api_key: ''
+  angel_client_code: ''
+  angel_pin: ''
+  angel_totp_secret: ''
+  scrip_cache_path: ''
+account:
+  capital: 500000.0
+  max_risk_per_trade_pct: 2.0
+  max_open_trades: 5
+  max_lots_per_trade: 10
+nifty_spreads:
+  enabled: true
+  dte_min: 3
+  dte_max: 45
+  expiry_index: 0
+  min_iv_rank: 25.0
+  short_delta: 0.16
+  wing_delta: 0.05
+  wing_width_points: 250.0
+  min_pop: 0.68
+  min_credit_pct_of_width: 0.3
+  max_spread_pct: 8.0
+  min_oi: 500
+  min_premium: 0.5
+  take_profit_pct: 0.5
+  stop_loss_multiple: 2.0
+  roll_dte: 2
+  allow_debit_spreads: true
+  debit_iv_rank_max: 30.0
+  debit_min_pop: 0.45
+  strategy_bias: auto
+stock_options:
+  enabled: true
+  expiry_index: 1
+  dte_min: 20
+  dte_max: 55
+  max_iv_rank: 32.0
+  delta_min: 0.55
+  delta_max: 0.78
+  trend_fast: 20
+  trend_slow: 50
+  rsi_window: 14
+  rsi_long_min: 50.0
+  rsi_long_max: 74.0
+  rsi_short_min: 26.0
+  rsi_short_max: 50.0
+  adx_min: 18.0
+  momentum_min_pct: 3.0
+  max_premium_pct_of_spot: 9.0
+  max_spread_pct: 6.0
+  min_oi: 1000
+  take_profit_pct: 0.5
+  stop_loss_pct: 0.4
+  prefer_debit_spread_above_iv_rank: 22.0
+  max_universe: 25
+alerts:
+  telegram_bot_token: ''
+  telegram_chat_id: ''
+  min_score: 55.0
+  only_market_hours: true
+  max_alerts_per_scan: 6
+  dedupe_minutes: 45
+scheduler:
+  interval_seconds: 120
+  market_open: 09:15
+  market_close: '15:30'
+  timezone: Asia/Kolkata
+  scan_outside_hours: true

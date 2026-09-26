@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>OptionDesk — Nifty spreads &amp; next-month option buying</title>
+<link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+<header>
+  <div class="brand">
+    <span class="logo">◧</span>
+    <div>
+      <h1>OptionDesk</h1>
+      <p class="sub">Nifty hedged spreads &middot; next-month stock option buying &middot; signals only, never auto-trades</p>
+    </div>
+  </div>
+  <div class="status">
+    <div class="pill" id="provider-pill">provider: …</div>
+    <div class="pill" id="market-pill">market: …</div>
+    <div class="pill" id="clock-pill">--:--</div>
+    <div class="pill" id="tg-pill">telegram: …</div>
+    <button class="btn primary" id="scan-btn">Scan now</button>
+    <button class="btn" id="advance-btn" title="Replay provider only">+5 min ⟳</button>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button class="tab active" data-tab="signals">Signals</button>
+  <button class="tab" data-tab="chain">Nifty chain</button>
+  <button class="tab" data-tab="stocks">Stock scanner</button>
+  <button class="tab" data-tab="lab">Strategy lab</button>
+  <button class="tab" data-tab="rules">Rules &amp; settings</button>
+</nav>
+
+<main>
+  <!-- ---------------- signals ---------------- -->
+  <section id="tab-signals" class="panel active">
+    <div class="row-meta">
+      <div id="scan-meta" class="muted">No scan yet.</div>
+      <div class="filters">
+        <select id="signal-kind">
+          <option value="">all setups</option>
+          <option value="NIFTY_SPREAD">Nifty hedged spreads</option>
+          <option value="STOCK_LONG_OPTION">Stock option buying</option>
+        </select>
+      </div>
+    </div>
+    <div id="signals-list" class="cards"></div>
+  </section>
+
+  <!-- ---------------- chain ---------------- -->
+  <section id="tab-chain" class="panel">
+    <div class="row-meta">
+      <div class="controls">
+        <label>Underlying
+          <select id="chain-underlying"><option>NIFTY</option><option>BANKNIFTY</option><option>FINNIFTY</option></select>
+        </label>
+        <label>Expiry <select id="chain-expiry"></select></label>
+      </div>
+      <div id="chain-head" class="chain-head"></div>
+    </div>
+    <div class="table-wrap"><table id="chain-table" class="grid"></table></div>
+  </section>
+
+  <!-- ---------------- stocks ---------------- -->
+  <section id="tab-stocks" class="panel">
+    <div class="row-meta">
+      <div class="muted">Next-month expiry. Green = rules allow buying premium, amber = use a debit spread, grey = no trade.</div>
+      <div class="filters">
+        <input id="stock-search" placeholder="filter symbol…" />
+        <select id="stock-verdict">
+          <option value="">all verdicts</option>
+          <option value="buy">buy setups</option>
+          <option value="spread">debit-spread setups</option>
+          <option value="avoid">avoid</option>
+        </select>
+      </div>
+    </div>
+    <div class="table-wrap"><table id="stocks-table" class="grid"></table></div>
+  </section>
+
+  <!-- ---------------- lab ---------------- -->
+  <section id="tab-lab" class="panel">
+    <div class="lab">
+      <div class="lab-inputs">
+        <div class="grid2">
+          <label>Spot <input id="lab-spot" type="number" step="0.05" value="25480" /></label>
+          <label>DTE <input id="lab-dte" type="number" value="7" /></label>
+          <label>IV % <input id="lab-iv" type="number" step="0.1" value="13" /></label>
+          <label>Lot size <input id="lab-lot" type="number" value="65" /></label>
+          <label>Lots <input id="lab-lots" type="number" value="1" /></label>
+        </div>
+        <div class="presets">
+          <button class="btn small" data-preset="iron_condor">Iron condor</button>
+          <button class="btn small" data-preset="bull_put">Bull put spread</button>
+          <button class="btn small" data-preset="bear_call">Bear call spread</button>
+          <button class="btn small" data-preset="call_debit">Call debit spread</button>
+          <button class="btn small" data-preset="long_call">Long call</button>
+        </div>
+        <table class="grid" id="lab-legs">
+          <thead><tr><th>Side</th><th>Type</th><th>Strike</th><th>Premium</th><th></th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <button class="btn small" id="lab-add-leg">+ add leg</button>
+        <button class="btn primary" id="lab-calc">Calculate</button>
+      </div>
+      <div class="lab-out">
+        <div id="lab-summary" class="summary muted">Build legs, then calculate.</div>
+        <div id="lab-chart"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------- rules ---------------- -->
+  <section id="tab-rules" class="panel">
+    <div class="two-col">
+      <div><h3>Rule set the engine enforces</h3><div id="rules-box"></div></div>
+      <div>
+        <h3>Live settings</h3>
+        <div id="settings-box" class="settings"></div>
+        <div class="row-meta">
+          <button class="btn primary" id="save-settings">Save settings</button>
+          <button class="btn" id="test-alert">Send test Telegram alert</button>
+        </div>
+        <div id="settings-msg" class="muted"></div>
+        <h3>Store</h3>
+        <pre id="store-stats" class="muted"></pre>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="muted">
+  Educational tool. Signals are computed from model prices and exchange data — verify quotes, margins
+  and settlement rules with your broker before trading. Options can lose the entire premium and,
+  on short legs, more than the credit received.
+</footer>
+<script src="/static/app.js"></script>
+</body>
+</html>
