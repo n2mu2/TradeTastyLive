@@ -53,6 +53,18 @@ jobs:
         run: |
           python run.py export-aptrade --out docs/data.json
 
+      - name: Sync TradingView Watchlist 3NiftyV2 (Account 1)
+        env:
+          TV_SESSION_ID: ${{ secrets.TV_SESSION_ID }}
+          TV_SESSION_SIGN: ${{ secrets.TV_SESSION_SIGN }}
+        run: |
+          if [ -n "$TV_SESSION_ID" ]; then
+            echo "Syncing 3NiftyV2 watchlist to TradingView Account 1..."
+            python run.py sync-tv --watchlist 3NiftyV2 --data docs/data.json
+          else
+            echo "TV_SESSION_ID not configured in secrets. Skipping direct TV cloud push."
+          fi
+
       - name: Commit & Push docs/data.json
         run: |
           git config user.name "github-actions[bot]"

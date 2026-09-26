@@ -138,6 +138,22 @@ def cmd_export_aptrade(args):
     print(f"✅ APTrade options dataset exported successfully to {out_file}")
 
 
+def cmd_sync_tv(args):
+    import os
+    from optiondesk.tv_sync import push_to_tradingview
+
+    sid = args.session_id or os.environ.get("TV_SESSION_ID", "")
+    sign = args.session_sign or os.environ.get("TV_SESSION_SIGN", "")
+    wl = args.watchlist or "3NiftyV2"
+    data = args.data or "docs/data.json"
+
+    if not sid:
+        print("⚠️ TradingView session ID not found. Set TV_SESSION_ID env var or pass --session-id.")
+        return
+
+    push_to_tradingview(session_id=sid, session_sign=sign, watchlist_name=wl, data_path=data)
+
+
 def cmd_test_alert(args):
     cfg = Config.load(args.config)
     from optiondesk.alerts import send_telegram
@@ -180,6 +196,13 @@ def main():
     p_exp = subparsers.add_parser("export-aptrade", help="Export options dataset for APTrade Android app")
     p_exp.add_argument("--out", default="docs/data.json", help="Path to write data.json (default docs/data.json)")
 
+    # sync-tv
+    p_tv = subparsers.add_parser("sync-tv", help="Sync 3NiftyV2 watchlist to TradingView")
+    p_tv.add_argument("--watchlist", default="3NiftyV2", help="Watchlist name (default 3NiftyV2)")
+    p_tv.add_argument("--data", default="docs/data.json", help="Path to data.json")
+    p_tv.add_argument("--session-id", default="", help="TradingView sessionid")
+    p_tv.add_argument("--session-sign", default="", help="TradingView sessionid_sign")
+
     # test-alert
     subparsers.add_parser("test-alert", help="Send test alert to Telegram")
 
@@ -194,6 +217,7 @@ def main():
         "check": cmd_check,
         "rules": cmd_rules,
         "export-aptrade": cmd_export_aptrade,
+        "sync-tv": cmd_sync_tv,
         "test-alert": cmd_test_alert,
     }
     dispatch[args.cmd](args)
