@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-28T15:30:33.919194+05:30",
-  "spot": 25483.35,
+  "generated_at": "2026-09-28T23:26:14.034444+05:30",
+  "spot": 25503.7,
   "results": {
     "next_week": {
       "bull": null,
@@ -9,48 +9,48 @@
       "v2": {
         "bull": null,
         "bear": {
-          "spot": 25483.35,
-          "sell_strike": 25900,
+          "spot": 25503.7,
+          "sell_strike": 25950,
           "sell_type": "CE",
           "buy_strike": 26300,
           "buy_type": "CE",
-          "sell_price": 66.18,
-          "buy_price": 13.26,
-          "sell_tv_symbol": "NIFTY06OCT2625900CE",
+          "sell_price": 69.45,
+          "buy_price": 17.95,
+          "sell_tv_symbol": "NIFTY06OCT2625950CE",
           "buy_tv_symbol": "NIFTY06OCT2626300CE",
-          "stop_loss_spot": 25952.9,
+          "stop_loss_spot": 26001.5,
           "metrics": {
-            "max_profit": 3440.0,
-            "max_loss": 22560.0,
-            "width": 400,
-            "credit": 52.92,
-            "risk_reward": 0.15,
-            "pop": 77.6
+            "max_profit": 3348.0,
+            "max_loss": 19402.0,
+            "width": 350,
+            "credit": 51.5,
+            "risk_reward": 0.17,
+            "pop": 78.3
           }
         },
         "sideways": {
-          "spot": 25483.35,
+          "spot": 25503.7,
           "sell_put_strike": 25100,
-          "sell_call_strike": 25900,
+          "sell_call_strike": 25950,
           "buy_put_strike": 24700,
           "buy_call_strike": 26300,
-          "sell_put_price": 61.79,
-          "sell_call_price": 66.18,
-          "buy_put_price": 12.56,
-          "buy_call_price": 13.26,
+          "sell_put_price": 63.9,
+          "sell_call_price": 69.45,
+          "buy_put_price": 13.46,
+          "buy_call_price": 17.95,
           "sell_put_tv": "NIFTY06OCT2625100PE",
-          "sell_call_tv": "NIFTY06OCT2625900CE",
+          "sell_call_tv": "NIFTY06OCT2625950CE",
           "buy_put_tv": "NIFTY06OCT2624700PE",
           "buy_call_tv": "NIFTY06OCT2626300CE",
-          "stop_loss_spot_low": 24997.8,
-          "stop_loss_spot_high": 26002.2,
+          "stop_loss_spot_low": 24998.1,
+          "stop_loss_spot_high": 26051.9,
           "metrics": {
-            "max_profit": 6640.0,
-            "max_loss": 19360.0,
-            "width": 400,
-            "credit": 102.15,
+            "max_profit": 6626.0,
+            "max_loss": 19374.0,
+            "width": 350,
+            "credit": 101.94,
             "risk_reward": 0.34,
-            "pop": 56.5
+            "pop": 57.3
           }
         }
       }
@@ -67,30 +67,88 @@
     },
     "stock_options": [
       {
+        "underlying": "RELIANCE",
+        "direction": "bullish",
+        "headline": "Long CE (bullish) on RELIANCE exp 27 Oct (29 DTE) -- B CE 1,440",
+        "strategy": "Long CE (bullish)",
+        "expiry": "2026-10-27",
+        "iv_rank": 2.8,
+        "max_profit": null,
+        "max_loss": 10198.0,
+        "breakevens": [
+          1480.79
+        ],
+        "legs": [
+          {
+            "action": "BUY",
+            "type": "CE",
+            "strike": "1440",
+            "premium": 40.79,
+            "symbol": "RELIANCE27OCT261440CE",
+            "lots": 1
+          }
+        ],
+        "exit_rules": [
+          "Book 50 % at 61.19",
+          "Exit at 24.47 (40% loss)",
+          "Exit with 7-10 DTE left (by 19 DTE) -- theta acceleration is the buyer's main enemy",
+          "Sell into an IV spike even if the price target is not hit"
+        ]
+      },
+      {
         "underlying": "INFY",
         "direction": "bullish",
         "headline": "Long CE (bullish) on INFY exp 27 Oct (29 DTE) -- B CE 1,580",
         "strategy": "Long CE (bullish)",
         "expiry": "2026-10-27",
-        "iv_rank": 1.0,
+        "iv_rank": 1.5,
         "max_profit": null,
-        "max_loss": 14052.0,
+        "max_loss": 14376.0,
         "breakevens": [
-          1615.13
+          1615.94
         ],
         "legs": [
           {
             "action": "BUY",
             "type": "CE",
             "strike": "1580",
-            "premium": 35.13,
+            "premium": 35.94,
             "symbol": "INFY27OCT261580CE",
             "lots": 1
           }
         ],
         "exit_rules": [
-          "Book 50 % at 52.70",
-          "Exit at 21.08 (40% loss)",
+          "Book 50 % at 53.91",
+          "Exit at 21.56 (40% loss)",
+          "Exit with 7-10 DTE left (by 19 DTE) -- theta acceleration is the buyer's main enemy",
+          "Sell into an IV spike even if the price target is not hit"
+        ]
+      },
+      {
+        "underlying": "TCS",
+        "direction": "bearish",
+        "headline": "Long PE (bearish) on TCS exp 27 Oct (29 DTE) -- B PE 3,200",
+        "strategy": "Long PE (bearish)",
+        "expiry": "2026-10-27",
+        "iv_rank": 2.5,
+        "max_profit": 545445.0,
+        "max_loss": 14555.0,
+        "breakevens": [
+          3116.83
+        ],
+        "legs": [
+          {
+            "action": "BUY",
+            "type": "PE",
+            "strike": "3200",
+            "premium": 83.17,
+            "symbol": "TCS27OCT263200PE",
+            "lots": 1
+          }
+        ],
+        "exit_rules": [
+          "Book 50 % at 124.75",
+          "Exit at 49.90 (40% loss)",
           "Exit with 7-10 DTE left (by 19 DTE) -- theta acceleration is the buyer's main enemy",
           "Sell into an IV spike even if the price target is not hit"
         ]
