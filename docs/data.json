@@ -1,99 +1,56 @@
 {
-  "generated_at": "2026-10-20T14:14:17.324990+05:30",
-  "spot": 25503.58,
+  "generated_at": "2026-10-20T20:07:50.634992+05:30",
+  "spot": 25487.79,
   "results": {
     "next_week": {
       "bull": null,
       "bear": null,
-      "sideways": {
-        "spot": 25503.58,
-        "sell_put_strike": 25100,
-        "sell_call_strike": 26000,
-        "buy_put_strike": 24800,
-        "buy_call_strike": 26300,
-        "sell_put_price": 43.37,
-        "sell_call_price": 36.86,
-        "buy_put_price": 10.8,
-        "buy_call_price": 8.84,
-        "sell_put_tv": "NIFTY27OCT2625100PE",
-        "sell_call_tv": "NIFTY27OCT2626000CE",
-        "buy_put_tv": "NIFTY27OCT2624800PE",
-        "buy_call_tv": "NIFTY27OCT2626300CE",
-        "stop_loss_spot_low": 25039.4,
-        "stop_loss_spot_high": 26060.6,
-        "metrics": {
-          "max_profit": 3938.0,
-          "max_loss": 15562.0,
-          "width": 300,
-          "credit": 60.59,
-          "risk_reward": 0.25,
-          "pop": 67.4
-        }
-      },
+      "sideways": null,
       "v2": {
         "bull": {
-          "spot": 25503.58,
-          "sell_strike": 25200,
+          "spot": 25487.79,
+          "sell_strike": 25150,
           "sell_type": "PE",
           "buy_strike": 24800,
           "buy_type": "PE",
-          "sell_price": 59.6,
-          "buy_price": 10.8,
-          "sell_tv_symbol": "NIFTY27OCT2625200PE",
+          "sell_price": 59.75,
+          "buy_price": 12.81,
+          "sell_tv_symbol": "NIFTY27OCT2625150PE",
           "buy_tv_symbol": "NIFTY27OCT2624800PE",
-          "stop_loss_spot": 25151.2,
+          "stop_loss_spot": 25103.1,
           "metrics": {
-            "max_profit": 3172.0,
-            "max_loss": 22828.0,
-            "width": 400,
-            "credit": 48.8,
-            "risk_reward": 0.14,
-            "pop": 76.3
-          }
-        },
-        "bear": {
-          "spot": 25503.58,
-          "sell_strike": 25900,
-          "sell_type": "CE",
-          "buy_strike": 26250,
-          "buy_type": "CE",
-          "sell_price": 55.74,
-          "buy_price": 12.91,
-          "sell_tv_symbol": "NIFTY27OCT2625900CE",
-          "buy_tv_symbol": "NIFTY27OCT2626250CE",
-          "stop_loss_spot": 25942.8,
-          "metrics": {
-            "max_profit": 2784.0,
-            "max_loss": 19966.0,
+            "max_profit": 3051.0,
+            "max_loss": 19699.0,
             "width": 350,
-            "credit": 42.83,
-            "risk_reward": 0.14,
-            "pop": 79.2
+            "credit": 46.94,
+            "risk_reward": 0.15,
+            "pop": 78.0
           }
         },
+        "bear": null,
         "sideways": {
-          "spot": 25503.58,
-          "sell_put_strike": 25200,
+          "spot": 25487.79,
+          "sell_put_strike": 25150,
           "sell_call_strike": 25900,
           "buy_put_strike": 24800,
           "buy_call_strike": 26250,
-          "sell_put_price": 59.6,
-          "sell_call_price": 55.74,
-          "buy_put_price": 10.8,
-          "buy_call_price": 12.91,
-          "sell_put_tv": "NIFTY27OCT2625200PE",
+          "sell_put_price": 59.75,
+          "sell_call_price": 53.18,
+          "buy_put_price": 12.81,
+          "buy_call_price": 12.88,
+          "sell_put_tv": "NIFTY27OCT2625150PE",
           "sell_call_tv": "NIFTY27OCT2625900CE",
           "buy_put_tv": "NIFTY27OCT2624800PE",
           "buy_call_tv": "NIFTY27OCT2626250CE",
-          "stop_loss_spot_low": 25108.4,
-          "stop_loss_spot_high": 25991.6,
+          "stop_loss_spot_low": 25062.8,
+          "stop_loss_spot_high": 25987.2,
           "metrics": {
-            "max_profit": 5956.0,
-            "max_loss": 20044.0,
+            "max_profit": 5671.0,
+            "max_loss": 17079.0,
             "width": 350,
-            "credit": 91.63,
-            "risk_reward": 0.3,
-            "pop": 55.5
+            "credit": 87.24,
+            "risk_reward": 0.33,
+            "pop": 57.5
           }
         }
       }
@@ -110,140 +67,61 @@
     },
     "stock_options": [
       {
-        "underlying": "INFY",
-        "direction": "bearish",
-        "headline": "Bearish PE Debit Spread on INFY exp 24 Nov (35 DTE) -- B PE 1,620 / S PE 1,580",
-        "strategy": "Bearish PE Debit Spread",
-        "expiry": "2026-11-24",
-        "iv_rank": 1.6,
-        "max_profit": 8700.0,
-        "max_loss": 7300.0,
-        "breakevens": [
-          1601.75
-        ],
-        "legs": [
-          {
-            "action": "BUY",
-            "type": "PE",
-            "strike": "1620",
-            "premium": 33.94,
-            "symbol": "INFY24NOV261620PE",
-            "lots": 1
-          },
-          {
-            "action": "SELL",
-            "type": "PE",
-            "strike": "1580",
-            "premium": 15.69,
-            "symbol": "INFY24NOV261580PE",
-            "lots": 1
-          }
-        ],
-        "exit_rules": [
-          "Close at 13.05/unit (60 % of max)",
-          "Close at 9.12/unit (50 % of cost)",
-          "Exit by 25 DTE"
-        ]
-      },
-      {
         "underlying": "RELIANCE",
         "direction": "bullish",
         "headline": "Long CE (bullish) on RELIANCE exp 24 Nov (35 DTE) -- B CE 1,440",
         "strategy": "Long CE (bullish)",
         "expiry": "2026-11-24",
-        "iv_rank": 1.7,
+        "iv_rank": 2.3,
         "max_profit": null,
-        "max_loss": 9880.0,
+        "max_loss": 10142.0,
         "breakevens": [
-          1479.52
+          1480.57
         ],
         "legs": [
           {
             "action": "BUY",
             "type": "CE",
             "strike": "1440",
-            "premium": 39.52,
+            "premium": 40.57,
             "symbol": "RELIANCE24NOV261440CE",
             "lots": 1
           }
         ],
         "exit_rules": [
-          "Book 50 % at 59.28",
-          "Exit at 23.71 (40% loss)",
+          "Book 50 % at 60.86",
+          "Exit at 24.34 (40% loss)",
           "Exit with 7-10 DTE left (by 25 DTE) -- theta acceleration is the buyer's main enemy",
           "Sell into an IV spike even if the price target is not hit"
         ]
       },
       {
-        "underlying": "AXISBANK",
-        "direction": "bearish",
-        "headline": "Bearish PE Debit Spread on AXISBANK exp 24 Nov (35 DTE) -- B PE 1,160 / S PE 1,120",
-        "strategy": "Bearish PE Debit Spread",
+        "underlying": "HCLTECH",
+        "direction": "bullish",
+        "headline": "Long CE (bullish) on HCLTECH exp 24 Nov (35 DTE) -- B CE 1,660",
+        "strategy": "Long CE (bullish)",
         "expiry": "2026-11-24",
-        "iv_rank": 4.0,
-        "max_profit": 15069.0,
-        "max_loss": 9931.0,
+        "iv_rank": 1.9,
+        "max_profit": null,
+        "max_loss": 15911.0,
         "breakevens": [
-          1144.11
+          1705.46
         ],
         "legs": [
           {
             "action": "BUY",
-            "type": "PE",
-            "strike": "1160",
-            "premium": 22.62,
-            "symbol": "AXISBANK24NOV261160PE",
-            "lots": 1
-          },
-          {
-            "action": "SELL",
-            "type": "PE",
-            "strike": "1120",
-            "premium": 6.73,
-            "symbol": "AXISBANK24NOV261120PE",
+            "type": "CE",
+            "strike": "1660",
+            "premium": 45.46,
+            "symbol": "HCLTECH24NOV261660CE",
             "lots": 1
           }
         ],
         "exit_rules": [
-          "Close at 14.47/unit (60 % of max)",
-          "Close at 7.95/unit (50 % of cost)",
-          "Exit by 25 DTE"
-        ]
-      },
-      {
-        "underlying": "SUNPHARMA",
-        "direction": "bearish",
-        "headline": "Bearish PE Debit Spread on SUNPHARMA exp 24 Nov (35 DTE) -- B PE 1,780 / S PE 1,720",
-        "strategy": "Bearish PE Debit Spread",
-        "expiry": "2026-11-24",
-        "iv_rank": 18.8,
-        "max_profit": 10892.0,
-        "max_loss": 10108.0,
-        "breakevens": [
-          1751.12
-        ],
-        "legs": [
-          {
-            "action": "BUY",
-            "type": "PE",
-            "strike": "1780",
-            "premium": 46.37,
-            "symbol": "SUNPHARMA24NOV261780PE",
-            "lots": 1
-          },
-          {
-            "action": "SELL",
-            "type": "PE",
-            "strike": "1720",
-            "premium": 17.49,
-            "symbol": "SUNPHARMA24NOV261720PE",
-            "lots": 1
-          }
-        ],
-        "exit_rules": [
-          "Close at 18.67/unit (60 % of max)",
-          "Close at 14.44/unit (50 % of cost)",
-          "Exit by 25 DTE"
+          "Book 50 % at 68.19",
+          "Exit at 27.28 (40% loss)",
+          "Exit with 7-10 DTE left (by 25 DTE) -- theta acceleration is the buyer's main enemy",
+          "Sell into an IV spike even if the price target is not hit"
         ]
       }
     ]
