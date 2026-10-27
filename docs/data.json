@@ -1,75 +1,80 @@
 {
-  "generated_at": "2026-10-27T14:42:11.558800+05:30",
-  "spot": 25535.27,
+  "generated_at": "2026-10-27T21:11:04.693636+05:30",
+  "spot": 25470.65,
   "results": {
     "next_week": {
       "bull": null,
       "bear": null,
-      "sideways": null,
+      "sideways": {
+        "spot": 25470.65,
+        "sell_put_strike": 25050,
+        "sell_call_strike": 25950,
+        "buy_put_strike": 24750,
+        "buy_call_strike": 26250,
+        "sell_put_price": 38.45,
+        "sell_call_price": 34.9,
+        "buy_put_price": 7.56,
+        "buy_call_price": 9.23,
+        "sell_put_tv": "NIFTY03NOV2625050PE",
+        "sell_call_tv": "NIFTY03NOV2625950CE",
+        "buy_put_tv": "NIFTY03NOV2624750PE",
+        "buy_call_tv": "NIFTY03NOV2626250CE",
+        "stop_loss_spot_low": 24993.4,
+        "stop_loss_spot_high": 26006.6,
+        "metrics": {
+          "max_profit": 3676.0,
+          "max_loss": 15824.0,
+          "width": 300,
+          "credit": 56.56,
+          "risk_reward": 0.23,
+          "pop": 68.7
+        }
+      },
       "v2": {
         "bull": {
-          "spot": 25535.27,
-          "sell_strike": 25200,
+          "spot": 25470.65,
+          "sell_strike": 25150,
           "sell_type": "PE",
-          "buy_strike": 24850,
+          "buy_strike": 24800,
           "buy_type": "PE",
-          "sell_price": 58.77,
-          "buy_price": 14.14,
-          "sell_tv_symbol": "NIFTY03NOV2625200PE",
-          "buy_tv_symbol": "NIFTY03NOV2624850PE",
-          "stop_loss_spot": 25155.4,
+          "sell_price": 56.87,
+          "buy_price": 12.09,
+          "sell_tv_symbol": "NIFTY03NOV2625150PE",
+          "buy_tv_symbol": "NIFTY03NOV2624800PE",
+          "stop_loss_spot": 25105.2,
           "metrics": {
-            "max_profit": 2901.0,
-            "max_loss": 19849.0,
+            "max_profit": 2911.0,
+            "max_loss": 19839.0,
             "width": 350,
-            "credit": 44.63,
+            "credit": 44.78,
             "risk_reward": 0.15,
-            "pop": 77.7
+            "pop": 78.0
           }
         },
-        "bear": {
-          "spot": 25535.27,
-          "sell_strike": 25950,
-          "sell_type": "CE",
-          "buy_strike": 26300,
-          "buy_type": "CE",
-          "sell_price": 56.2,
-          "buy_price": 11.99,
-          "sell_tv_symbol": "NIFTY03NOV2625950CE",
-          "buy_tv_symbol": "NIFTY03NOV2626300CE",
-          "stop_loss_spot": 25994.2,
-          "metrics": {
-            "max_profit": 2874.0,
-            "max_loss": 19876.0,
-            "width": 350,
-            "credit": 44.21,
-            "risk_reward": 0.14,
-            "pop": 79.6
-          }
-        },
+        "bear": null,
         "sideways": {
-          "spot": 25535.27,
-          "sell_put_strike": 25200,
-          "sell_call_strike": 25950,
-          "buy_put_strike": 24850,
-          "buy_call_strike": 26300,
-          "sell_put_price": 58.77,
-          "sell_call_price": 56.2,
-          "buy_put_price": 14.14,
-          "buy_call_price": 11.99,
-          "sell_put_tv": "NIFTY03NOV2625200PE",
-          "sell_call_tv": "NIFTY03NOV2625950CE",
-          "buy_put_tv": "NIFTY03NOV2624850PE",
-          "buy_call_tv": "NIFTY03NOV2626300CE",
-          "stop_loss_spot_low": 25111.2,
-          "stop_loss_spot_high": 26038.8,
+          "spot": 25470.65,
+          "sell_put_strike": 25150,
+          "sell_call_strike": 25850,
+          "buy_put_strike": 24800,
+          "buy_call_strike": 26200,
+          "sell_put_price": 56.87,
+          "sell_call_price": 52.2,
+          "buy_put_price": 12.09,
+          "buy_call_price": 10.93,
+          "sell_put_tv": "NIFTY03NOV2625150PE",
+          "sell_call_tv": "NIFTY03NOV2625850CE",
+          "buy_put_tv": "NIFTY03NOV2624800PE",
+          "buy_call_tv": "NIFTY03NOV2626200CE",
+          "stop_loss_spot_low": 25064.0,
+          "stop_loss_spot_high": 25936.0,
           "metrics": {
-            "max_profit": 5775.0,
-            "max_loss": 16975.0,
+            "max_profit": 5593.0,
+            "max_loss": 17157.0,
             "width": 350,
-            "credit": 88.84,
-            "risk_reward": 0.34,
-            "pop": 57.3
+            "credit": 86.05,
+            "risk_reward": 0.33,
+            "pop": 56.8
           }
         }
       }
@@ -87,29 +92,123 @@
     "stock_options": [
       {
         "underlying": "TCS",
-        "direction": "bearish",
-        "headline": "Long PE (bearish) on TCS exp 24 Nov (28 DTE) -- B PE 3,200",
-        "strategy": "Long PE (bearish)",
+        "direction": "bullish",
+        "headline": "Long CE (bullish) on TCS exp 24 Nov (28 DTE) -- B CE 3,100",
+        "strategy": "Long CE (bullish)",
         "expiry": "2026-11-24",
-        "iv_rank": 2.3,
-        "max_profit": 546061.0,
-        "max_loss": 13939.0,
+        "iv_rank": 4.4,
+        "max_profit": null,
+        "max_loss": 10626.0,
         "breakevens": [
-          3120.35
+          3160.72
+        ],
+        "legs": [
+          {
+            "action": "BUY",
+            "type": "CE",
+            "strike": "3100",
+            "premium": 60.72,
+            "symbol": "TCS24NOV263100CE",
+            "lots": 1
+          }
+        ],
+        "exit_rules": [
+          "Book 50 % at 91.08",
+          "Exit at 36.43 (40% loss)",
+          "Exit with 7-10 DTE left (by 18 DTE) -- theta acceleration is the buyer's main enemy",
+          "Sell into an IV spike even if the price target is not hit"
+        ]
+      },
+      {
+        "underlying": "INFY",
+        "direction": "bullish",
+        "headline": "Long CE (bullish) on INFY exp 24 Nov (28 DTE) -- B CE 1,580",
+        "strategy": "Long CE (bullish)",
+        "expiry": "2026-11-24",
+        "iv_rank": 2.5,
+        "max_profit": null,
+        "max_loss": 14552.0,
+        "breakevens": [
+          1616.38
+        ],
+        "legs": [
+          {
+            "action": "BUY",
+            "type": "CE",
+            "strike": "1580",
+            "premium": 36.38,
+            "symbol": "INFY24NOV261580CE",
+            "lots": 1
+          }
+        ],
+        "exit_rules": [
+          "Book 50 % at 54.57",
+          "Exit at 21.83 (40% loss)",
+          "Exit with 7-10 DTE left (by 18 DTE) -- theta acceleration is the buyer's main enemy",
+          "Sell into an IV spike even if the price target is not hit"
+        ]
+      },
+      {
+        "underlying": "AXISBANK",
+        "direction": "bearish",
+        "headline": "Bearish PE Debit Spread on AXISBANK exp 24 Nov (28 DTE) -- B PE 1,160 / S PE 1,120",
+        "strategy": "Bearish PE Debit Spread",
+        "expiry": "2026-11-24",
+        "iv_rank": 2.2,
+        "max_profit": 15388.0,
+        "max_loss": 9612.0,
+        "breakevens": [
+          1144.62
         ],
         "legs": [
           {
             "action": "BUY",
             "type": "PE",
-            "strike": "3200",
-            "premium": 79.65,
-            "symbol": "TCS24NOV263200PE",
+            "strike": "1160",
+            "premium": 21.25,
+            "symbol": "AXISBANK24NOV261160PE",
+            "lots": 1
+          },
+          {
+            "action": "SELL",
+            "type": "PE",
+            "strike": "1120",
+            "premium": 5.87,
+            "symbol": "AXISBANK24NOV261120PE",
             "lots": 1
           }
         ],
         "exit_rules": [
-          "Book 50 % at 119.48",
-          "Exit at 47.79 (40% loss)",
+          "Close at 14.77/unit (60 % of max)",
+          "Close at 7.69/unit (50 % of cost)",
+          "Exit by 18 DTE"
+        ]
+      },
+      {
+        "underlying": "HCLTECH",
+        "direction": "bullish",
+        "headline": "Long CE (bullish) on HCLTECH exp 24 Nov (28 DTE) -- B CE 1,660",
+        "strategy": "Long CE (bullish)",
+        "expiry": "2026-11-24",
+        "iv_rank": 2.6,
+        "max_profit": null,
+        "max_loss": 14438.0,
+        "breakevens": [
+          1701.25
+        ],
+        "legs": [
+          {
+            "action": "BUY",
+            "type": "CE",
+            "strike": "1660",
+            "premium": 41.25,
+            "symbol": "HCLTECH24NOV261660CE",
+            "lots": 1
+          }
+        ],
+        "exit_rules": [
+          "Book 50 % at 61.88",
+          "Exit at 24.75 (40% loss)",
           "Exit with 7-10 DTE left (by 18 DTE) -- theta acceleration is the buyer's main enemy",
           "Sell into an IV spike even if the price target is not hit"
         ]
