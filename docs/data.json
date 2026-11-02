@@ -1,37 +1,75 @@
 {
-  "generated_at": "2026-11-02T16:59:08.455316+05:30",
-  "spot": 25426.81,
+  "generated_at": "2026-11-03T01:26:42.361971+05:30",
+  "spot": 25463.38,
   "results": {
     "next_week": {
       "bull": null,
       "bear": null,
       "sideways": null,
       "v2": {
-        "bull": null,
-        "bear": null,
+        "bull": {
+          "spot": 25463.38,
+          "sell_strike": 25100,
+          "sell_type": "PE",
+          "buy_strike": 24700,
+          "buy_type": "PE",
+          "sell_price": 65.23,
+          "buy_price": 12.22,
+          "sell_tv_symbol": "NIFTY10NOV2625100PE",
+          "buy_tv_symbol": "NIFTY10NOV2624700PE",
+          "stop_loss_spot": 25047.0,
+          "metrics": {
+            "max_profit": 3446.0,
+            "max_loss": 22554.0,
+            "width": 400,
+            "credit": 53.01,
+            "risk_reward": 0.15,
+            "pop": 77.8
+          }
+        },
+        "bear": {
+          "spot": 25463.38,
+          "sell_strike": 25900,
+          "sell_type": "CE",
+          "buy_strike": 26250,
+          "buy_type": "CE",
+          "sell_price": 61.03,
+          "buy_price": 16.55,
+          "sell_tv_symbol": "NIFTY10NOV2625900CE",
+          "buy_tv_symbol": "NIFTY10NOV2626250CE",
+          "stop_loss_spot": 25944.5,
+          "metrics": {
+            "max_profit": 2891.0,
+            "max_loss": 19859.0,
+            "width": 350,
+            "credit": 44.48,
+            "risk_reward": 0.15,
+            "pop": 78.8
+          }
+        },
         "sideways": {
-          "spot": 25426.81,
+          "spot": 25463.38,
           "sell_put_strike": 25100,
-          "sell_call_strike": 25850,
+          "sell_call_strike": 25900,
           "buy_put_strike": 24700,
           "buy_call_strike": 26250,
-          "sell_put_price": 64.14,
-          "sell_call_price": 59.29,
-          "buy_put_price": 14.63,
-          "buy_call_price": 11.96,
+          "sell_put_price": 65.23,
+          "sell_call_price": 61.03,
+          "buy_put_price": 12.22,
+          "buy_call_price": 16.55,
           "sell_put_tv": "NIFTY10NOV2625100PE",
-          "sell_call_tv": "NIFTY10NOV2625850CE",
+          "sell_call_tv": "NIFTY10NOV2625900CE",
           "buy_put_tv": "NIFTY10NOV2624700PE",
           "buy_call_tv": "NIFTY10NOV2626250CE",
-          "stop_loss_spot_low": 25003.2,
-          "stop_loss_spot_high": 25946.8,
+          "stop_loss_spot_low": 25002.5,
+          "stop_loss_spot_high": 25997.5,
           "metrics": {
-            "max_profit": 6295.0,
-            "max_loss": 19705.0,
-            "width": 400,
-            "credit": 96.84,
+            "max_profit": 6337.0,
+            "max_loss": 19663.0,
+            "width": 350,
+            "credit": 97.49,
             "risk_reward": 0.32,
-            "pop": 55.2
+            "pop": 56.6
           }
         }
       }
