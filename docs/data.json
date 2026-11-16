@@ -1,56 +1,75 @@
 {
-  "generated_at": "2026-11-16T17:19:42.884904+05:30",
-  "spot": 25452.82,
+  "generated_at": "2026-11-17T01:28:18.356775+05:30",
+  "spot": 25472.78,
   "results": {
     "next_week": {
       "bull": null,
       "bear": null,
       "sideways": null,
       "v2": {
-        "bull": null,
+        "bull": {
+          "spot": 25472.78,
+          "sell_strike": 25150,
+          "sell_type": "PE",
+          "buy_strike": 24750,
+          "buy_type": "PE",
+          "sell_price": 68.16,
+          "buy_price": 13.61,
+          "sell_tv_symbol": "NIFTY24NOV2625150PE",
+          "buy_tv_symbol": "NIFTY24NOV2624750PE",
+          "stop_loss_spot": 25095.5,
+          "metrics": {
+            "max_profit": 3546.0,
+            "max_loss": 22454.0,
+            "width": 400,
+            "credit": 54.55,
+            "risk_reward": 0.16,
+            "pop": 76.1
+          }
+        },
         "bear": {
-          "spot": 25452.82,
+          "spot": 25472.78,
           "sell_strike": 25900,
           "sell_type": "CE",
           "buy_strike": 26250,
           "buy_type": "CE",
-          "sell_price": 62.29,
-          "buy_price": 18.0,
+          "sell_price": 60.75,
+          "buy_price": 14.45,
           "sell_tv_symbol": "NIFTY24NOV2625900CE",
           "buy_tv_symbol": "NIFTY24NOV2626250CE",
-          "stop_loss_spot": 25944.3,
+          "stop_loss_spot": 25946.3,
           "metrics": {
-            "max_profit": 2879.0,
-            "max_loss": 19871.0,
+            "max_profit": 3010.0,
+            "max_loss": 19740.0,
             "width": 350,
-            "credit": 44.29,
-            "risk_reward": 0.14,
+            "credit": 46.3,
+            "risk_reward": 0.15,
             "pop": 79.1
           }
         },
         "sideways": {
-          "spot": 25452.82,
-          "sell_put_strike": 25100,
+          "spot": 25472.78,
+          "sell_put_strike": 25150,
           "sell_call_strike": 25900,
-          "buy_put_strike": 24650,
+          "buy_put_strike": 24750,
           "buy_call_strike": 26250,
-          "sell_put_price": 70.03,
-          "sell_call_price": 62.29,
-          "buy_put_price": 13.97,
-          "buy_call_price": 18.0,
-          "sell_put_tv": "NIFTY24NOV2625100PE",
+          "sell_put_price": 68.16,
+          "sell_call_price": 60.75,
+          "buy_put_price": 13.61,
+          "buy_call_price": 14.45,
+          "sell_put_tv": "NIFTY24NOV2625150PE",
           "sell_call_tv": "NIFTY24NOV2625900CE",
-          "buy_put_tv": "NIFTY24NOV2624650PE",
+          "buy_put_tv": "NIFTY24NOV2624750PE",
           "buy_call_tv": "NIFTY24NOV2626250CE",
-          "stop_loss_spot_low": 24999.7,
-          "stop_loss_spot_high": 26000.3,
+          "stop_loss_spot_low": 25049.2,
+          "stop_loss_spot_high": 26000.8,
           "metrics": {
-            "max_profit": 6523.0,
-            "max_loss": 22727.0,
+            "max_profit": 6555.0,
+            "max_loss": 19445.0,
             "width": 350,
-            "credit": 100.35,
-            "risk_reward": 0.29,
-            "pop": 55.9
+            "credit": 100.85,
+            "risk_reward": 0.34,
+            "pop": 55.2
           }
         }
       }
@@ -68,67 +87,31 @@
     "stock_options": [
       {
         "underlying": "TCS",
-        "direction": "bullish",
-        "headline": "Long CE (bullish) on TCS exp 29 Dec (43 DTE) -- B CE 3,100",
-        "strategy": "Long CE (bullish)",
+        "direction": "bearish",
+        "headline": "Long PE (bearish) on TCS exp 29 Dec (43 DTE) -- B PE 3,200",
+        "strategy": "Long PE (bearish)",
         "expiry": "2026-12-29",
-        "iv_rank": 1.7,
-        "max_profit": null,
-        "max_loss": 12994.0,
+        "iv_rank": 1.1,
+        "max_profit": 544932.0,
+        "max_loss": 15068.0,
         "breakevens": [
-          3174.25
+          3113.9
         ],
         "legs": [
           {
             "action": "BUY",
-            "type": "CE",
-            "strike": "3100",
-            "premium": 74.25,
-            "symbol": "TCS29DEC263100CE",
+            "type": "PE",
+            "strike": "3200",
+            "premium": 86.1,
+            "symbol": "TCS29DEC263200PE",
             "lots": 1
           }
         ],
         "exit_rules": [
-          "Book 50 % at 111.38",
-          "Exit at 44.55 (40% loss)",
+          "Book 50 % at 129.15",
+          "Exit at 51.66 (40% loss)",
           "Exit with 7-10 DTE left (by 33 DTE) -- theta acceleration is the buyer's main enemy",
           "Sell into an IV spike even if the price target is not hit"
-        ]
-      },
-      {
-        "underlying": "INFY",
-        "direction": "bearish",
-        "headline": "Bearish PE Debit Spread on INFY exp 29 Dec (43 DTE) -- B PE 1,620 / S PE 1,560",
-        "strategy": "Bearish PE Debit Spread",
-        "expiry": "2026-12-29",
-        "iv_rank": 1.3,
-        "max_profit": 13876.0,
-        "max_loss": 10124.0,
-        "breakevens": [
-          1594.69
-        ],
-        "legs": [
-          {
-            "action": "BUY",
-            "type": "PE",
-            "strike": "1620",
-            "premium": 37.35,
-            "symbol": "INFY29DEC261620PE",
-            "lots": 1
-          },
-          {
-            "action": "SELL",
-            "type": "PE",
-            "strike": "1560",
-            "premium": 12.04,
-            "symbol": "INFY29DEC261560PE",
-            "lots": 1
-          }
-        ],
-        "exit_rules": [
-          "Close at 20.81/unit (60 % of max)",
-          "Close at 12.66/unit (50 % of cost)",
-          "Exit by 33 DTE"
         ]
       }
     ]
