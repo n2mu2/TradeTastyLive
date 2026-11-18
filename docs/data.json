@@ -1,56 +1,99 @@
 {
-  "generated_at": "2026-11-18T00:24:48.153042+05:30",
-  "spot": 25479.16,
+  "generated_at": "2026-11-18T17:28:56.583116+05:30",
+  "spot": 25496.68,
   "results": {
     "next_week": {
       "bull": null,
       "bear": null,
-      "sideways": null,
+      "sideways": {
+        "spot": 25496.68,
+        "sell_put_strike": 25100,
+        "sell_call_strike": 25950,
+        "buy_put_strike": 24800,
+        "buy_call_strike": 26250,
+        "sell_put_price": 39.08,
+        "sell_call_price": 39.45,
+        "buy_put_price": 9.51,
+        "buy_call_price": 9.57,
+        "sell_put_tv": "NIFTY24NOV2625100PE",
+        "sell_call_tv": "NIFTY24NOV2625950CE",
+        "buy_put_tv": "NIFTY24NOV2624800PE",
+        "buy_call_tv": "NIFTY24NOV2626250CE",
+        "stop_loss_spot_low": 25040.5,
+        "stop_loss_spot_high": 26009.5,
+        "metrics": {
+          "max_profit": 3864.0,
+          "max_loss": 15636.0,
+          "width": 300,
+          "credit": 59.45,
+          "risk_reward": 0.25,
+          "pop": 66.1
+        }
+      },
       "v2": {
         "bull": {
-          "spot": 25479.16,
-          "sell_strike": 25150,
+          "spot": 25496.68,
+          "sell_strike": 25200,
           "sell_type": "PE",
-          "buy_strike": 24750,
+          "buy_strike": 24850,
           "buy_type": "PE",
-          "sell_price": 68.1,
-          "buy_price": 12.43,
-          "sell_tv_symbol": "NIFTY24NOV2625150PE",
-          "buy_tv_symbol": "NIFTY24NOV2624750PE",
-          "stop_loss_spot": 25094.3,
+          "sell_price": 61.09,
+          "buy_price": 13.24,
+          "sell_tv_symbol": "NIFTY24NOV2625200PE",
+          "buy_tv_symbol": "NIFTY24NOV2624850PE",
+          "stop_loss_spot": 25152.2,
           "metrics": {
-            "max_profit": 3619.0,
-            "max_loss": 22381.0,
-            "width": 400,
-            "credit": 55.67,
+            "max_profit": 3110.0,
+            "max_loss": 19640.0,
+            "width": 350,
+            "credit": 47.85,
             "risk_reward": 0.16,
-            "pop": 76.7
+            "pop": 76.2
           }
         },
-        "bear": null,
-        "sideways": {
-          "spot": 25479.16,
-          "sell_put_strike": 25150,
-          "sell_call_strike": 25900,
-          "buy_put_strike": 24750,
-          "buy_call_strike": 26300,
-          "sell_put_price": 68.1,
-          "sell_call_price": 57.5,
-          "buy_put_price": 12.43,
-          "buy_call_price": 11.57,
-          "sell_put_tv": "NIFTY24NOV2625150PE",
-          "sell_call_tv": "NIFTY24NOV2625900CE",
-          "buy_put_tv": "NIFTY24NOV2624750PE",
-          "buy_call_tv": "NIFTY24NOV2626300CE",
-          "stop_loss_spot_low": 25048.4,
-          "stop_loss_spot_high": 26001.6,
+        "bear": {
+          "spot": 25496.68,
+          "sell_strike": 25850,
+          "sell_type": "CE",
+          "buy_strike": 26200,
+          "buy_type": "CE",
+          "sell_price": 57.61,
+          "buy_price": 12.8,
+          "sell_tv_symbol": "NIFTY24NOV2625850CE",
+          "buy_tv_symbol": "NIFTY24NOV2626200CE",
+          "stop_loss_spot": 25894.8,
           "metrics": {
-            "max_profit": 6604.0,
-            "max_loss": 19396.0,
-            "width": 400,
-            "credit": 101.6,
-            "risk_reward": 0.34,
-            "pop": 56.0
+            "max_profit": 2913.0,
+            "max_loss": 19837.0,
+            "width": 350,
+            "credit": 44.81,
+            "risk_reward": 0.15,
+            "pop": 77.3
+          }
+        },
+        "sideways": {
+          "spot": 25496.68,
+          "sell_put_strike": 25200,
+          "sell_call_strike": 25850,
+          "buy_put_strike": 24850,
+          "buy_call_strike": 26200,
+          "sell_put_price": 61.09,
+          "sell_call_price": 57.61,
+          "buy_put_price": 13.24,
+          "buy_call_price": 12.8,
+          "sell_put_tv": "NIFTY24NOV2625200PE",
+          "sell_call_tv": "NIFTY24NOV2625850CE",
+          "buy_put_tv": "NIFTY24NOV2624850PE",
+          "buy_call_tv": "NIFTY24NOV2626200CE",
+          "stop_loss_spot_low": 25107.3,
+          "stop_loss_spot_high": 25942.7,
+          "metrics": {
+            "max_profit": 6023.0,
+            "max_loss": 16727.0,
+            "width": 350,
+            "credit": 92.66,
+            "risk_reward": 0.36,
+            "pop": 53.5
           }
         }
       }
@@ -67,52 +110,23 @@
     },
     "stock_options": [
       {
-        "underlying": "RELIANCE",
-        "direction": "bearish",
-        "headline": "Long PE (bearish) on RELIANCE exp 29 Dec (42 DTE) -- B PE 1,500",
-        "strategy": "Long PE (bearish)",
-        "expiry": "2026-12-29",
-        "iv_rank": 2.2,
-        "max_profit": 364795.0,
-        "max_loss": 10205.0,
-        "breakevens": [
-          1459.18
-        ],
-        "legs": [
-          {
-            "action": "BUY",
-            "type": "PE",
-            "strike": "1500",
-            "premium": 40.82,
-            "symbol": "RELIANCE29DEC261500PE",
-            "lots": 1
-          }
-        ],
-        "exit_rules": [
-          "Book 50 % at 61.23",
-          "Exit at 24.49 (40% loss)",
-          "Exit with 7-10 DTE left (by 32 DTE) -- theta acceleration is the buyer's main enemy",
-          "Sell into an IV spike even if the price target is not hit"
-        ]
-      },
-      {
         "underlying": "INFY",
         "direction": "bullish",
-        "headline": "Bullish CE Debit Spread on INFY exp 29 Dec (42 DTE) -- B CE 1,580 / S CE 1,640",
+        "headline": "Bullish CE Debit Spread on INFY exp 29 Dec (41 DTE) -- B CE 1,580 / S CE 1,640",
         "strategy": "Bullish CE Debit Spread",
         "expiry": "2026-12-29",
-        "iv_rank": 0.8,
-        "max_profit": 12688.0,
-        "max_loss": 11312.0,
+        "iv_rank": 0.6,
+        "max_profit": 13336.0,
+        "max_loss": 10664.0,
         "breakevens": [
-          1608.28
+          1606.66
         ],
         "legs": [
           {
             "action": "BUY",
             "type": "CE",
             "strike": "1580",
-            "premium": 42.62,
+            "premium": 40.09,
             "symbol": "INFY29DEC261580CE",
             "lots": 1
           },
@@ -120,15 +134,15 @@
             "action": "SELL",
             "type": "CE",
             "strike": "1640",
-            "premium": 14.34,
+            "premium": 13.43,
             "symbol": "INFY29DEC261640CE",
             "lots": 1
           }
         ],
         "exit_rules": [
-          "Close at 19.03/unit (60 % of max)",
-          "Close at 14.14/unit (50 % of cost)",
-          "Exit by 32 DTE"
+          "Close at 20.00/unit (60 % of max)",
+          "Close at 13.33/unit (50 % of cost)",
+          "Exit by 31 DTE"
         ]
       }
     ]
